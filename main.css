@@ -28,7 +28,6 @@ hr{
 
 nav{
   padding-top: 20px;
-  /* border:5px solid blue; */
   display: flex;
   justify-content: space-around;
 
@@ -41,14 +40,21 @@ nav{
   border: transparent;
   background: yellow;
   border:transparent;
-  /* border-radius: 0.1rem; */
+  /* border-radius: 1rem; */
   padding: 0.5rem 1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: bolder;
   outline:2px solid yellow;
   outline-offset: 4px;
+  transition: transform 0.25s;
 } 
+
+.nav-btn:hover{
+  opacity: 0.9;
+  transform: translateY(-0.25em)
+
+}
 
 @media (max-width:540px) {
   nav {
