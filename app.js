@@ -20,6 +20,7 @@ const url = "https://swapi.dev/api/";
 window.addEventListener('DOMContentLoaded',(event)=>{
   // console.log("Dom Loaded");
   const nav = document.querySelector('#btn-container');
+  const h2 = document.querySelector('#hide');
   // console.log(nav);
   fetch(url).then((data)=>data.json()).then(res=>{
     console.log(res);
@@ -36,6 +37,7 @@ window.addEventListener('DOMContentLoaded',(event)=>{
       btn.addEventListener('click', (e)=>{
         const main = document.querySelector('main');
         main.innerHTML = " ";
+        h2.innerHTML = " ";
         console.log(main);
         const btnClicked = e.target;
         fetch(btnClicked.link)
@@ -47,6 +49,7 @@ window.addEventListener('DOMContentLoaded',(event)=>{
               const div = document.createElement('div');
               div.textContent = element.name || element.title;
               console.log(div);
+              div.classList.add("main-items");
               main.append(div);
               console.log(main);
               // console.log(div)
