@@ -34,11 +34,24 @@ window.addEventListener('DOMContentLoaded',(event)=>{
 
       /* Event listener to button */
       btn.addEventListener('click', (e)=>{
+        const main = document.querySelector('main');
+        main.innerHTML = " ";
+        console.log(main);
         const btnClicked = e.target;
         fetch(btnClicked.link)
           .then(data=>data.json())
           .then(res=>{
             console.log(res.results);
+            res.results.forEach(element => {
+              // console.log(element.name)
+              const div = document.createElement('div');
+              div.textContent = element.name || element.title;
+              console.log(div);
+              main.append(div);
+              console.log(main);
+              // console.log(div)
+
+            });
 
           });
 
