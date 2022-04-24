@@ -36,6 +36,8 @@ nav{
 }
 
 .nav-btn{
+    font-family:'Orbitron',
+    sans-serif;
   margin:0.5rem;
   border: transparent;
   background: yellow;
@@ -54,6 +56,28 @@ nav{
   opacity: 0.9;
   transform: translateY(-0.25em)
 
+}
+
+main{
+padding: 20px;
+margin-top:15px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.main-items{
+  font-family: 'Josefin Sans',
+  sans-serif;
+  font-size: 28px;
+  border:2px solid black;
+  margin:0.5rem;
+  padding:10px;
+  text-align: center;
+  background: yellow;
+  width: 50%;
+  letter-spacing: 0.1rem;
 }
 
 @media (max-width:540px) {
