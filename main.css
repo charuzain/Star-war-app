@@ -1,8 +1,27 @@
 
-body{
-  background-color: black;
+body,h1,hr{
+   background-color: black; 
+  /* background: url("galaxy.jpg");  */
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 .title{
-  color:white;
+  font-family: 'Orbitron',sans-serif;
+  color: black;
+  font-size: 56px;
+  height:10vh;
+  text-align: center;
+  letter-spacing: 0.4rem;
+  font-weight:bolder;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: yellow;
+  padding: 15px;
+   
 }
+
+hr{
+ border: 2px solid yellow;
+}
+
