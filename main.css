@@ -50,4 +50,14 @@ nav{
   outline-offset: 4px;
 } 
 
+@media (max-width:540px) {
+  nav {
+    flex-direction: column;
+  }
 
+  .nav-btn{
+    margin: 10px;
+    outline:none
+  }
+
+}
