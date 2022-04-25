@@ -48,7 +48,39 @@ window.addEventListener('DOMContentLoaded',(event)=>{
               // console.log(element.name)
               const div = document.createElement('div');
               div.textContent = element.name || element.title;
-              console.log(div);
+              div.link = element.url;
+              console.log(div.link);
+
+              div.addEventListener('click',(e)=>{
+                main.innerHTML = " ";
+
+                const el = e.target;
+                console.log(el.link);
+                
+                //  load the detail of item clicked , make fetch request to load element on page
+
+                fetch(el.link)
+                  .then(data=>data.json())
+                  .then(res=>{
+                    console.log(res);
+                    for (let property in res) {
+                      console.log(property);
+
+                      console.log(typeof(res[property]));
+                      const dataType = typeof(res[property]);
+                      let output = (dataType === 'string') ? res[property] : JSON.stringify(res[property]);
+                      main.classList.add("item-detail");
+
+                      main.innerHTML += `<div>${property} : ${output}</div>`;
+
+                      // console.log(res[property]);
+                    }
+                  })
+                  .catch(err=>console.log(err));
+                
+              });
+              // console.log(div);
+              main.classList.remove("item-detail");
               div.classList.add("main-items");
               main.append(div);
               console.log(main);
