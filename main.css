@@ -80,6 +80,24 @@ align-items: center;
   letter-spacing: 0.1rem;
 }
 
+/* .item-detail{
+  background-color: yellow;
+} */
+
+.item-detail>div{
+    font-family: 'Josefin Sans',
+    sans-serif;
+    font-size: 28px;
+  border:2px solid black;
+  margin:0.5rem;
+  padding:10px;
+  text-align: center;
+  background: orangered;
+  width: 90%;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+}
+
 @media (max-width:540px) {
   nav {
     flex-direction: column;
